@@ -10,6 +10,7 @@ import {
   Patch,
   Post,
 } from '@nestjs/common';
+import { IsObjectIdPipe } from 'nestjs-object-id';
 
 @Controller('users')
 export class UsersController {
@@ -26,20 +27,20 @@ export class UsersController {
   }
 
   @Get(':id')
-  async user(@Param('id') _id: string): Promise<User> {
+  async user(@Param('id', IsObjectIdPipe) _id: string): Promise<User> {
     return this.usersService.findOne({ _id });
   }
 
   @Patch(':id')
   async updateUser(
-    @Param('id') _id: string,
+    @Param('id', IsObjectIdPipe) _id: string,
     @Body() updateUserDto: UpdateUserDto,
   ): Promise<User> {
     return this.usersService.update({ _id }, updateUserDto);
   }
 
   @Delete(':id')
-  async deleteUser(@Param('id') _id: string): Promise<User> {
+  async deleteUser(@Param('id', IsObjectIdPipe) _id: string): Promise<User> {
     return this.usersService.delete({ _id });
   }
 }

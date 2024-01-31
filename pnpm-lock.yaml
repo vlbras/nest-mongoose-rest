@@ -35,6 +35,9 @@ dependencies:
   mongoose:
     specifier: ^8.1.1
     version: 8.1.1
+  nestjs-object-id:
+    specifier: ^1.2.1
+    version: 1.2.1(class-transformer@0.5.1)(reflect-metadata@0.1.14)(rxjs@7.8.1)
   reflect-metadata:
     specifier: ^0.1.13
     version: 0.1.14
@@ -4109,6 +4112,26 @@ packages:
   /neo-async@2.6.2:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: true
+
+  /nestjs-object-id@1.2.1(class-transformer@0.5.1)(reflect-metadata@0.1.14)(rxjs@7.8.1):
+    resolution: {integrity: sha512-2o2lP0ymisDgcDG6dATFCaVk8H1IoqS+Vby6gh+yihVwYD5Q6SHE2+6dPmPdRWZArZq4f0mX9bb167ayNMAT9Q==}
+    dependencies:
+      '@nestjs/common': 10.3.1(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.1.14)(rxjs@7.8.1)
+      class-validator: 0.14.1
+      mongoose: 8.1.1
+    transitivePeerDependencies:
+      - '@aws-sdk/credential-providers'
+      - '@mongodb-js/zstd'
+      - class-transformer
+      - gcp-metadata
+      - kerberos
+      - mongodb-client-encryption
+      - reflect-metadata
+      - rxjs
+      - snappy
+      - socks
+      - supports-color
+    dev: false
 
   /node-abort-controller@3.1.1:
     resolution: {integrity: sha512-AGK2yQKIjRuqnc6VkX2Xj5d+QW8xZ87pa1UK6yA6ouUyuxfHuMP6umE5QK7UmTeOAymo+Zx1Fxiuw9rVx8taHQ==}
